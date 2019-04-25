@@ -7,6 +7,5 @@ if (!$link) {
 echo 'Connected successfully';
 mysql_close($link);
 echo "<br>EDSI";
-echo "hola"
 ?>
 
