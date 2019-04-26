@@ -1,4 +1,8 @@
-pipeline{ 
+pipeline{
+	enviroment{
+	registry = "gcntm/eldo"
+	registryCredential = "dockerhub"
+	} 
 	agent any
 	stages{
 		stage('Starting'){
@@ -13,14 +17,11 @@ pipeline{
 	}
         stage('Build Images'){
         steps{
-                sh 'sudo docker build --tag=php54 .'
+	script{
+		dockerImage=docker.build registry + ":$BUILD_NUMBER"
                 }
+		}
         }
-	stage('Deploy Container'){
-        steps{
-                sh 'sudo docker-compose up -d'
-                }
-        }
-
+	
    }
 } 
