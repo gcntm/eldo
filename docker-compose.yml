@@ -17,7 +17,7 @@ services:
   php:
     image: php54
     volumes:
-      - ./code/:/var/www/html
+      - ./php54/:/var/www/html
     expose:
       - 80
     ports:
