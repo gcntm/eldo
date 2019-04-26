@@ -1,5 +1,5 @@
 pipeline{
-	enviroment{
+	environment{
 	registry = "gcntm/eldo"
 	registryCredential = "dockerhub"
 	} 
