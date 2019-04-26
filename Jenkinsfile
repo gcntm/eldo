@@ -10,14 +10,11 @@ pipeline{
 	steps{
 		sh 'sudo docker ps'
 		}
-	 stages{
-                stage('Build Images'){
-                steps{
+	}
+        stage('Build Images'){
+        steps{
                 sh 'sudo docker build --tag=php54 .'
                 }
         }
-
-	}
    }
-
 } 
