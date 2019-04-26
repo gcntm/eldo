@@ -4,5 +4,5 @@ RUN apt-get -y update
 RUN apt-get -y install libxslt-dev
 RUN docker-php-ext-install mysql mbstring exif mysqli xsl
 RUN docker-php-ext-enable mysql mbstring exif mysqli xsl
-ADD ["index.php","./php54/:/var/www/html/"]
-ADD ["db.php","./php54/:/var/www/html/"]
+ADD ["index.php","./code/:/var/www/html/"]
+ADD ["db.php","./code/:/var/www/html/"]
